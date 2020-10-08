@@ -1,8 +1,8 @@
 #!/usr/bin/env python3
 from urllib.parse import (
-    urlsplit, urlunsplit,
+    urlsplit, urlunsplit, urljoin
     quote, quote_plus,
-    parse_qsl, urlencode, urljoin, urldefrag
+    parse_qsl, urlencode, urldefrag
 )
 links = open("links.txt", mode="rt", encoding="utf-8", errors="strict")
 links = links.read().split("\n")
