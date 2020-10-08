@@ -1,6 +1,6 @@
 #!/usr/bin/env python3
 from urllib.parse import (
-    urlsplit, urlunsplit, urljoin
+    urlsplit, urlunsplit, urljoin,
     quote, quote_plus,
     parse_qsl, urlencode, urldefrag
 )
