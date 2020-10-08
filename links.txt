@@ -1,0 +1,20 @@
+https://et.wikipedia.org
+https://super.secret.intra
+http://localhost:8080
+http://localhost:8080
+https://example.com
+http://ww.ee
+https://et.wikipedia.org
+https://wer.ee
+ssh://user@localhost
+lol_no_protocol
+http://hello there/ok nice
+https://et.wikipedia.org
+https://et.wikipedia.org
+gemini://tilde.pink
+no-proto#cool
+http://example.com:80/a?query=nothn much&nada_arg#fragment is cool
+
+just a?que ry&anoth er=on e=&here's some=more&nope
+
+no_protocol??
