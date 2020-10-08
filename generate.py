@@ -4,6 +4,8 @@ from urllib.parse import (
     quote, quote_plus,
     parse_qsl, urlencode, urldefrag
 )
+from html import escape
+
 links = open("links.txt", mode="rt", encoding="utf-8", errors="strict")
 links = links.read().split("\n")
 used = []
@@ -50,7 +52,7 @@ for i in range(0, len(used)):
     b[3] = urlencode(query)
     for q in empty_q:
         b[3] += "&"+q
-    print(b[3])
+#    print(b[3])
     try:
         b[4] = quote(b[4])
     except Exception:
@@ -58,9 +60,9 @@ for i in range(0, len(used)):
 
 
     nr = f"{i+1:>3}|"
-    print(b)
+#    print(b)
     url = urlunsplit(b)
     url = urljoin("https://",url,allow_fragments=True)
     #url = url.replace("https:///", "https://", 1)
-    print(nr, url)
+    print(nr, url, escape(used[i]))
     x = url
