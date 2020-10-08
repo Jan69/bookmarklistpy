@@ -7,7 +7,8 @@ http://ww.ee
 https://et.wikipedia.org
 https://wer.ee
 ssh://user@localhost
-lol_no_protocol
+haha not a proto here
+lolz no protolol/and a bit of path
 http://hello there/ok nice
 https://et.wikipedia.org
 https://et.wikipedia.org
