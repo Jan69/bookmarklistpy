@@ -64,5 +64,5 @@ for i in range(0, len(used)):
     url = urlunsplit(b)
     url = urljoin("https://",url,allow_fragments=True)
     #url = url.replace("https:///", "https://", 1)
-    print(nr, url, escape(used[i]))
+    print(f"<li><pre><a id={i+1}, href='{url}'>", nr, escape(used[i]), "</a></pre></li>")
     x = url
