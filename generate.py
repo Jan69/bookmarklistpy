@@ -11,6 +11,7 @@ links = links.read().split("\n")
 used = []
 [x for x in links if x not in used and (used.append(x) or True)]
 x = ""  # previous value, auto-setting https to where there's no scheme
+o2=[]
 for i in range(0, len(used)):
     a = urlsplit(used[i])
     a = list(a)
@@ -18,7 +19,7 @@ for i in range(0, len(used)):
     if b == ['', '', '', '', '']:  # skip empty item(s)
         continue
 
-    
+
     if b[0] == b[1] == "":
         split=b[2].split("/")
 #        print("↓EMPTY PROTO & HOST")
@@ -59,10 +60,28 @@ for i in range(0, len(used)):
         pass
 
 
-    nr = f"{i+1:>3}|"
 #    print(b)
     url = urlunsplit(b)
     url = urljoin("https://",url,allow_fragments=True)
     #url = url.replace("https:///", "https://", 1)
-    print(f"<li><pre><a id={i+1}, href='{url}'>", nr, escape(used[i]), "</a></pre></li>")
+    o2+=[f"<li><pre><a id=\"{i+1:>1}\" href='{url}'>{i+1:>3}| "+escape(used[i])+"</a></pre></li>"]
     x = url
+
+#output before list
+o1="""<html><head><title>bookmarklist.py</title>
+<link rel="stylesheet" type="text/css" href="style.css" media="screen"/>
+</head><body><ul>
+"""
+#output after list
+o3="""
+</ul></body></html>"""
+
+o=""
+#print(o1)
+#for i in o2: print(i)
+#print(o3)
+
+f=open("x.html", "w")
+f.write(o1)
+for i in o2: f.write(i+"\n")
+f.write(o3)
