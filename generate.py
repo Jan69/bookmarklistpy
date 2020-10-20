@@ -6,12 +6,20 @@ from urllib.parse import (
 )
 from html import escape
 from sys import argv
+from os.path import realpath
 
 print(argv)
-linksfile="links.txt" #fallback
-try: linksfile=argv[1] #if argv[1]!="all" else linksfile
+selfpath=realpath(__file__)
+path=selfpath.split("/").pop()
+if isinstance(path, str): linksfile="links.txt"
+else: linksfile=path+"links.txt" #fallback to links.txt in the repo
+outfile="x.html" #fallback
+try: linksfile=argv[1] if argv[1]!="all" else linksfile #makefile magic
 except IndexError: pass
-print(linksfile)
+try: outfile=argv[2]
+except IndexError: pass
+print("using links from",linksfile)
+print("writing output to",outfile)
 
 links = open(linksfile, mode="rt", encoding="utf-8", errors="strict")
 links = links.read().split("\n")
@@ -84,9 +92,14 @@ for i in range(0, len(used)):
     x = url
 
 #output before list
-o1="""<!DOCTYPE html><html><head><title>bookmarklist.py</title>
+o1="""<!DOCTYPE html><html><head>
+<meta charset="utf-8">
+<title>bookmarklist.py</title>
+<link rel="icon" type="image/svg+xml" href="favicon.svg">
 <link rel="stylesheet" type="text/css" href="style.css" media="screen"/>
-</head><body><ul>"""
+</head><body>
+<img src="favicon.svg"/>
+<ul>"""
 #output after list
 o3="""</ul></body></html>"""
 
@@ -95,7 +108,7 @@ o=""
 #for i in o2: print(i)
 #print(o3)
 
-f=open("x.html", "w")
+f=open(outfile, "w")
 f.write(o1+"\n")
 for i in o2: f.write(i+"\n")
 f.write(o3+"\n")
