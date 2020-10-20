@@ -11,11 +11,12 @@ links = links.read().split("\n")
 used = []
 [x for x in links if x not in used and (used.append(x) or True)]
 x = ""  # previous value, auto-setting https to where there's no scheme
+
 o2=[]
 for i in range(0, len(used)):
-    a = urlsplit(used[i])
-    a = list(a)
-    b = a
+    comment=used[i].split(" ~ ",1)[0]
+    a=used[i].split(" ~ ",1)[0]
+    b = list(urlsplit(a))
     if b == ['', '', '', '', '']:  # skip empty item(s)
         continue
 
