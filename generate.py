@@ -78,11 +78,9 @@ for i in range(0, len(used)):
 #output before list
 o1="""<!DOCTYPE html><html><head><title>bookmarklist.py</title>
 <link rel="stylesheet" type="text/css" href="style.css" media="screen"/>
-</head><body><ul>
-"""
+</head><body><ul>"""
 #output after list
-o3="""
-</ul></body></html>"""
+o3="""</ul></body></html>"""
 
 o=""
 #print(o1)
@@ -90,6 +88,6 @@ o=""
 #print(o3)
 
 f=open("x.html", "w")
-f.write(o1)
+f.write(o1+"\n")
 for i in o2: f.write(i+"\n")
-f.write(o3)
+f.write(o3+"\n")
