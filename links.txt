@@ -1,4 +1,4 @@
-https://et.wikipedia.org
+vikipeedia! ~ https://et.wikipedia.org
 https://super.secret.intra
 http://localhost:8080
 http://localhost:8080
