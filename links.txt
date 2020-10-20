@@ -2,11 +2,11 @@ https://et.wikipedia.org ~ vikipeedia!
 https://super.secret.intra
 http://localhost:8080
 http://localhost:8080
-https://example.com
+https://example.com ~ example domain
 http://ww.ee
 https://et.wikipedia.org
 htp:/inv<a>lisd>&#123;&amp;;
-https://wer.ee
+https://wer.ee ~ jan6's page
 ssh://user@localhost
 haha not a proto here
 lolz no protolol/and a bit of path
@@ -14,6 +14,7 @@ http://hello there/ok nice
 https://et.wikipedia.org
 https://et.wikipedia.org
 gemini://tilde.pink
+gopher://gopher.floodgap.com/1/world ~ floodgap gopher list of gophers
 no-proto#cool
 http://example.com:80/a?query=nothn much&nada_arg#fragment is cool
 
