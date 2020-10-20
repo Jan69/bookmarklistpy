@@ -8,8 +8,9 @@ from html import escape
 from sys import argv
 
 print(argv)
-try: linksfile=argv[1]
-except IndexError: linksfile="links.txt"
+linksfile="links.txt" #fallback
+try: linksfile=argv[1] #if argv[1]!="all" else linksfile
+except IndexError: pass
 print(linksfile)
 
 links = open(linksfile, mode="rt", encoding="utf-8", errors="strict")
