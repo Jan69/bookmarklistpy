@@ -7,8 +7,10 @@ from urllib.parse import (
 from html import escape
 from sys import argv
 
+print(argv)
 try: linksfile=argv[1]
 except IndexError: linksfile="links.txt"
+print(linksfile)
 
 links = open(linksfile, mode="rt", encoding="utf-8", errors="strict")
 links = links.read().split("\n")
@@ -35,7 +37,7 @@ for i in range(0, len(used)):
 #        print("host old",b[1])
 #        b[1]=split[0]  #host
         #host must have nothing except alphanum and "-" and "."
-        b[1]="".join(list([x for x in split[0] if x.isalnum() or x.replace("-","").isalnum() or x=="."]))
+        b[1]="".join(list([y for y in split[0] if y.isalnum() or y.replace("-","").isalnum() or y=="."]))
 #        print("host new",b[1])
 #        print("path old",b[2])
         try:
