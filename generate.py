@@ -14,7 +14,7 @@ x = ""  # previous value, auto-setting https to where there's no scheme
 
 o2=[]
 for i in range(0, len(used)):
-    comment=used[i].split(" ~ ",1)[0]
+    comment=used[i].split(" ~ ",1)[1]
     a=used[i].split(" ~ ",1)[0]
     b = list(urlsplit(a))
     if b == ['', '', '', '', '']:  # skip empty item(s)
@@ -65,7 +65,7 @@ for i in range(0, len(used)):
     url = urlunsplit(b)
     url = urljoin("https://",url,allow_fragments=True)
     #url = url.replace("https:///", "https://", 1)
-    displayname=used[i] if not comment else comment
+    displayname=url if not comment else comment
     o2+=[f"<li><pre><a id=\"{i+1:>1}\" href='{url}'>{i+1:>3}| "+escape(displayname)+"</a></pre></li>"]
     x = url
 
