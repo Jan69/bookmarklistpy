@@ -30,7 +30,7 @@ for i in range(0, len(used)):
 #        print("↓EMPTY PROTO & HOST")
 #        print("host old",b[1])
 #        b[1]=split[0]  #host
-        b[1]="".join(list([x for x in split[0] if val.isalnum()]))  #host
+        b[1]="".join(list([x for x in split[0] if x.isalnum()]))  #host
 #        print("host new",b[1])
 #        print("path old",b[2])
         try:
