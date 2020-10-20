@@ -29,7 +29,8 @@ for i in range(0, len(used)):
         split=b[2].split("/")
 #        print("↓EMPTY PROTO & HOST")
 #        print("host old",b[1])
-        b[1]=split[0]
+#        b[1]=split[0]  #host
+        b[1]="".join(list([x for x in split[0] if val.isalnum()]))  #host
 #        print("host new",b[1])
 #        print("path old",b[2])
         try:
@@ -70,7 +71,8 @@ for i in range(0, len(used)):
     url = urljoin("https://",url,allow_fragments=True)
     #url = url.replace("https:///", "https://", 1)
     displayname=a if comment==False else comment
-    o2+=[f"<li><pre><span class=\"nr\"><a href=\"#{i+1:>1}\" class=\"nr\" >{i+1:>3}</a></span><a id=\"{i+1:>1}\" href='{url}'>"+escape(displayname)+"</a></pre></li>"]
+    
+    o2+=[f"<li><pre><span class=\"nr\"><a href=\"#{i+1:>1}\" class=\"nr\" >{i+1:>3}</a></span><a id=\"{i+1:>1}\" href=\"{url}\">"+escape(displayname)+"</a></pre></li>"]
     x = url
 
 #output before list
