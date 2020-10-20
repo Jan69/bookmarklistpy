@@ -28,6 +28,14 @@ li {
 	border: 1px solid rgba(250, 200, 0, 0.7);
 	list-style: none;
 	border-radius: 0.25em;
+	overflow:hidden;
+	white-space: nowrap;
+	text-overflow:ellipsis;
+}
+li *{
+        overflow:hidden;
+        white-space: nowrap;
+        text-overflow:ellipsis;
 }
 li:target{
 	border:2px solid yellow;
@@ -35,7 +43,8 @@ li:target{
 	animation: fade ease-in-out 0.5s;
 }
 a{color:#489}
-a:visited {color:#926}
+/*a:visited*/
+a:not(.nr):visited {color:#926}
 a:valid{color:#fff}
 span.nr{margin:0.5em;padding:0.25em;background:black;border: 0.15em solid rgba(2000, 150, 10, 0.8);user-select: contain;}
 span{user-select: none;}
