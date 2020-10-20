@@ -4,7 +4,9 @@ html {
 	height: 100%;
 	width: 100%;
 	background-attachment: fixed;
+	font-size:115%;
 }
+pre{font-size:1.2em}
 h2{text-align:center;font-family:monospace}
 body {
 	width: 50%;

@@ -21,3 +21,5 @@ http://example.com:80/a?query=nothn much&nada_arg#fragment is cool
 just a?que ry&anoth er=on e=&here's some=more&nope
 
 no_protocol??
+
+ultrasuperlonglinklolultrasuperlonglinklolultrasuperlonglinklolultrasuperlonglinklolultrasuperlonglinklolultrasuperlonglinklolultrasuperlonglinklolultrasuperlonglinklolultrasuperlonglinklolultrasuperlonglinklol
