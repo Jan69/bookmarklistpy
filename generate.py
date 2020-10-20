@@ -5,6 +5,7 @@ from urllib.parse import (
     parse_qsl, urlencode, urldefrag
 )
 from html import escape
+from sys import argv
 
 links = open("links.txt", mode="rt", encoding="utf-8", errors="strict")
 links = links.read().split("\n")
