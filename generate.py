@@ -15,6 +15,7 @@ x = ""  # previous value, auto-setting https to where there's no scheme
 o2=[]
 for i in range(0, len(used)):
     try: comment=used[i].split(" ~ ",1)[1]
+    except IndexError: comment=False
     a=used[i].split(" ~ ",1)[0]
     b = list(urlsplit(a))
     if b == ['', '', '', '', '']:  # skip empty item(s)
