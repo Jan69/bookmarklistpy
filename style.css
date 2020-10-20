@@ -45,7 +45,7 @@ li:target{
 a{color:#489}
 /*a:visited*/
 a:not(.nr):visited {color:#926}
-a.nr{ text-decoration:none; }
+a.nr{ text-decoration:none;border:1px solid yellow;padding:0.25em;margin:0.25em; }
 a:valid{color:#fff}
 span.nr{margin:0.5em;padding:0.25em;background:black;border: 0.15em solid rgba(2000, 150, 10, 0.8);user-select: contain;}
 span{user-select: none;}

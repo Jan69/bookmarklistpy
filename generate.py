@@ -72,6 +72,7 @@ for i in range(0, len(used)):
     displayname=a if comment==False else comment
     o2+=[f"<li><pre><span><a href=\"#{i+1:>1}\" class=\"nr\" >{i+1:>3}</a></span><a id=\"{i+1:>1}\" href='{url}'>"+escape(displayname)+"</a></pre></li>"]
     x = url
+    print(f"{i+1:>3}")
 
 #output before list
 o1="""<html><head><title>bookmarklist.py</title>
