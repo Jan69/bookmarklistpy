@@ -7,7 +7,10 @@ from urllib.parse import (
 from html import escape
 from sys import argv
 
-links = open("links.txt", mode="rt", encoding="utf-8", errors="strict")
+if argv[1]!="": linksfile=argv[1]
+else: linksfile="links.txt"
+
+links = open(linksfile, mode="rt", encoding="utf-8", errors="strict")
 links = links.read().split("\n")
 used = []
 [x for x in links if x not in used and (used.append(x) or True)]
