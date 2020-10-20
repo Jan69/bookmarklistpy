@@ -20,7 +20,6 @@ for i in range(0, len(used)):
     except IndexError:
         comment=False
         a=used[i]
-    print(used[i].split(" ~ ",1))
     b = list(urlsplit(a))
     if b == ['', '', '', '', '']:  # skip empty item(s)
         continue
