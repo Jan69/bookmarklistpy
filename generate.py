@@ -7,7 +7,7 @@ from urllib.parse import (
 from html import escape
 from sys import argv
 
-if argv[1]!="": linksfile=argv[1]
+if argv[1]==argv[1]: linksfile=argv[1]
 else: linksfile="links.txt"
 
 links = open(linksfile, mode="rt", encoding="utf-8", errors="strict")
