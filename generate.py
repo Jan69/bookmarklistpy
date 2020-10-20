@@ -70,9 +70,8 @@ for i in range(0, len(used)):
     url = urljoin("https://",url,allow_fragments=True)
     #url = url.replace("https:///", "https://", 1)
     displayname=a if comment==False else comment
-    o2+=[f"<li><pre><span><a href=\"#{i+1:>1}\" class=\"nr\" >{i+1:>3}</a></span><a id=\"{i+1:>1}\" href='{url}'>"+escape(displayname)+"</a></pre></li>"]
+    o2+=[f"<li><pre class=\"nr\"><span><a href=\"#{i+1:>1}\" class=\"nr\" ><pre>{i+1:>3}</pre></a></span><a id=\"{i+1:>1}\" href='{url}'>"+escape(displayname)+"</a></pre></li>"]
     x = url
-    print(f"{i+1:>3}")
 
 #output before list
 o1="""<html><head><title>bookmarklist.py</title>
