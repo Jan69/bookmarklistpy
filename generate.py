@@ -69,7 +69,7 @@ for i in range(0, len(used)):
     url = urlunsplit(b)
     url = urljoin("https://",url,allow_fragments=True)
     #url = url.replace("https:///", "https://", 1)
-    displayname=a if not comment else comment
+    displayname=a if comment==False else comment
     o2+=[f"<li><pre><span><a href=\"#{i+1:>1}\">{i+1:>3}| </a></span><a id=\"{i+1:>1}\" href='{url}'>"+escape(displayname)+"</a></pre></li>"]
     x = url
 
