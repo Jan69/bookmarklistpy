@@ -1,6 +1,8 @@
+https://example.org
+https://example.org ~ link to example.org
+
 https://et.wikipedia.org ~ vikipeedia!
-https://super.secret.intra
-http://localhost:8080
+http://localhost:8081
 http://localhost:8080
 https://example.com ~ example domain
 http://ww.ee
@@ -23,3 +25,6 @@ just a?que ry&anoth er=on e=&here's some=more&nope
 no_protocol??
 
 ultrasuperlonglinklolultrasuperlonglinklolultrasuperlonglinklolultrasuperlonglinklolultrasuperlonglinklolultrasuperlonglinklolultrasuperlonglinklolultrasuperlonglinklolultrasuperlonglinklolultrasuperlonglinklol
+
+all hail jan6
+file:/// ~ file:// url
